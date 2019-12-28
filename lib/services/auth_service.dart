@@ -4,8 +4,8 @@ import 'package:google_sign_in/google_sign_in.dart';
 class AuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn =GoogleSignIn();
-  
-  
+
+
 
   Stream<String> get onAuthStateChanged => _firebaseAuth.onAuthStateChanged.map(
         (FirebaseUser user) => user?.uid,
@@ -15,7 +15,6 @@ class AuthService {
   //Get Uid
   Future<String>getCurrentUID()async{
     return (await _firebaseAuth.currentUser()).uid;
-    
   }
 
   // Email & Password Sign Up
