@@ -23,7 +23,7 @@ class _NewTripDateViewState extends State<NewTripDateView> {
           initialFirstDate: _startDate,
           initialLastDate: _endDate,
           firstDate: new DateTime(DateTime.now().year -50),
-          lastDate: new DateTime(DateTime.now().year +50)
+          lastDate: new DateTime(DateTime.now().year +50),
       );
       if (picked != null && picked.length == 2) {
           setState(() {
